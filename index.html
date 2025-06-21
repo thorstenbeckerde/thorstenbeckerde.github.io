@@ -36,22 +36,28 @@
         li {
             background-color: #fff;
             border: 1px solid #ddd;
-            padding: 15px 20px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            transition: transform 0.2s;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
         li:hover {
             transform: scale(1.02);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
         a {
             text-decoration: none;
             color: #007BFF;
+            font-size: 1.1em;
             font-weight: bold;
         }
         a:hover {
             text-decoration: underline;
+        }
+        p.description {
+            margin: 8px 0 0 0;
+            color: #555;
+            font-size: 0.95em;
         }
         footer {
             text-align: center;
@@ -65,37 +71,58 @@
 
     <header>
         <h1>My HTML Applications</h1>
-        <p>This page serves as a frontpage to all my current HTML apps for easy access.</p>
+        <p>A collection of web-based tools for thought, creativity, and strategic planning.</p>
     </header>
 
     <main>
         <section>
-            <h2>Main Apps under my Clarity Navigation framework</h2>
+            <h2>Main Apps under the Clarity Navigation framework</h2>
+            <p class="description">These are the core tools for mapping internal experiences.</p>
             <ul>
-                <li><a href="https://thorstenbeckerde.github.io/FEMS/" target="_blank" rel="noopener noreferrer">Fuzzy Emotion Mapping System (FEMS)</a></li>
-                <li><a href="https://thorstenbeckerde.github.io/CHORUS/" target="_blank" rel="noopener noreferrer">CHORUS</a></li>
-                <li><a href="https://thorstenbeckerde.github.io/Stellary/" target="_blank" rel="noopener noreferrer">Stellary</a></li>
+                <li>
+                    <a href="https://thorstenbeckerde.github.io/FEMS/" target="_blank" rel="noopener noreferrer">Fuzzy Emotion Mapping System (FEMS)</a>
+                    <p class="description">A visual tool for exploring your emotional landscape. Map aspects of your inner world to gain clarity on feelings and their connections.</p>
+                </li>
+                <li>
+                    <a href="https://thorstenbeckerde.github.io/CHORUS/" target="_blank" rel="noopener noreferrer">CHORUS</a>
+                    <p class="description">A non-linear note-taking system for writers and creatives. Structure your thoughts as constellations of ideas, not rigid outlines.</p>
+                </li>
+                <li>
+                    <a href="https://thorstenbeckerde.github.io/Stellary/" target="_blank" rel="noopener noreferrer">Stellary</a>
+                    <p class="description">A poetic and sensory approach to memory. Create "constellations" of images, sounds, and text fragments to map and reflect on experiences.</p>
+                </li>
             </ul>
         </section>
 
         <section>
-            <h2>Special Game/Narrative Design Version</h2>
+            <h2>Specialized Game & Narrative Design Versions</h2>
+            <p class="description">Derivatives of the main apps, tailored for storytellers and game developers.</p>
             <ul>
-                <li><a href="https://thorstenbeckerde.github.io/NPCEW/" target="_blank" rel="noopener noreferrer">NPC Emotion Weaver</a></li>
-                <li><a href="https://thorstenbeckerde.github.io/CHORUSPS/" target="_blank" rel="noopener noreferrer">CHORUS Perceptual Storyteller</a></li>
+                <li>
+                    <a href="https://thorstenbeckerde.github.io/NPCEW/" target="_blank" rel="noopener noreferrer">NPC Emotion Weaver</a>
+                    <p class="description">A tool for game writers to visually map the emotional states, triggers, and narrative arcs of Non-Player Characters (NPCs).</p>
+                </li>
+                <li>
+                    <a href="https://thorstenbeckerde.github.io/CHORUSPS/" target="_blank" rel="noopener noreferrer">CHORUS Perceptual Storyteller</a>
+                    <p class="description">A narrative design tool for mapping stories based on character perception and sensory experience. Ideal for interactive fiction, with exports to Ren'Py, Yarn, and Ink.</p>
+                </li>
             </ul>
         </section>
 
         <section>
-            <h2>Others</h2>
+            <h2>Professional & Strategic Editions</h2>
+             <p class="description">Tools adapted for business, planning, and analysis.</p>
             <ul>
-                <li><a href="https://thorstenbeckerde.github.io/CHORUSstrategist/" target="_blank" rel="noopener noreferrer">CHORUS Strategist Edition</a></li>
+                <li>
+                    <a href="https://thorstenbeckerde.github.io/CHORUSstrategist/" target="_blank" rel="noopener noreferrer">CHORUS Strategist Edition</a>
+                    <p class="description">A powerful version of CHORUS for strategic planning. Map out objectives, assets, threats, and courses of action for business, wargaming, or competitive analysis.</p>
+                </li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Thorsten Becker. All rights reserved.</p>
+        <p>&copy; 2024 Thorsten Becker. All rights reserved.</p>
     </footer>
 
 </body>
