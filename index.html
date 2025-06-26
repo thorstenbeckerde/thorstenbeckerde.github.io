@@ -3,126 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thorsten Becker's HTML Apps</title>
+    <title>Thorsten Becker - Web App Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            background-color: #f9f9f9;
+            font-family: 'Inter', sans-serif;
         }
-        header {
-            text-align: center;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-        h1 {
-            color: #111;
-        }
-        h2 {
-            color: #333;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
-            margin-top: 40px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 20px 25px;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        li:hover {
-            transform: scale(1.02);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        }
-        a {
-            text-decoration: none;
-            color: #007BFF;
-            font-size: 1.1em;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        p.description {
-            margin: 8px 0 0 0;
-            color: #555;
-            font-size: 0.95em;
-        }
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 0.9em;
-            color: #777;
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
-    <header>
-        <h1>My HTML Applications</h1>
-        <p>A collection of web-based tools for thought, creativity, and strategic planning.</p>
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-10 text-center">
+            <h1 class="text-4xl font-bold text-gray-900 md:text-5xl">Thorsten Becker</h1>
+            <p class="mt-3 text-lg text-gray-600">A collection of web-based tools for thought, creativity, and strategic planning.</p>
+            <div class="mt-5 flex justify-center gap-4">
+                <a href="https://github.com/thorstenbeckerde" target="_blank" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">
+                    <span class="sr-only">GitHub</span>
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                </a>
+            </div>
+        </div>
     </header>
 
-    <main>
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        
+        <!-- Section 1: Main Apps -->
         <section>
-            <h2>Main Apps under the Clarity Navigation framework</h2>
-            <p class="description">These are the core tools for mapping internal experiences.</p>
-            <ul>
-                <li>
-                    <a href="https://thorstenbeckerde.github.io/FEMS/" target="_blank" rel="noopener noreferrer">Fuzzy Emotion Mapping System (FEMS)</a>
-                    <p class="description">A visual tool for exploring your emotional landscape. Map aspects of your inner world to gain clarity on feelings and their connections.</p>
-                </li>
-                <li>
-                    <a href="https://thorstenbeckerde.github.io/CHORUS/" target="_blank" rel="noopener noreferrer">CHORUS</a>
-                    <p class="description">A non-linear note-taking system for writers and creatives. Structure your thoughts as constellations of ideas, not rigid outlines.</p>
-                </li>
-                <li>
-                    <a href="https://thorstenbeckerde.github.io/Stellary/" target="_blank" rel="noopener noreferrer">Stellary</a>
-                    <p class="description">A poetic and sensory approach to memory. Create "constellations" of images, sounds, and text fragments to map and reflect on experiences.</p>
-                </li>
-            </ul>
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">Main Apps under the Clarity Navigation framework</h2>
+            <p class="text-lg text-gray-600 mb-8">These are the core tools for mapping internal experiences.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Fuzzy Emotion Mapping System (FEMS)</h3>
+                        <p class="text-gray-600">A visual tool for exploring your emotional landscape. Map aspects of your inner world to gain clarity on feelings and their connections.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <a href="https://thorstenbeckerde.github.io/FEMS/" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 w-full text-center">View App</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">CHORUS</h3>
+                        <p class="text-gray-600">A non-linear note-taking system for writers and creatives. Structure your thoughts as constellations of ideas, not rigid outlines.</p>
+                    </div>
+                     <div class="p-6 bg-gray-50">
+                        <a href="https://thorstenbeckerde.github.io/CHORUS/" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-green-600 transition-colors duration-300 w-full text-center">View App</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Stellary</h3>
+                        <p class="text-gray-600">A poetic and sensory approach to memory. Create "constellations" of images, sounds, and text fragments to map and reflect on experiences.</p>
+                    </div>
+                     <div class="p-6 bg-gray-50">
+                        <a href="https://thorstenbeckerde.github.io/Stellary/" target="_blank" rel="noopener noreferrer" class="inline-block bg-purple-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-purple-600 transition-colors duration-300 w-full text-center">View App</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Specialized Game & Narrative Design Versions</h2>
-            <p class="description">Derivatives of the main apps, tailored for storytellers and game developers.</p>
-            <ul>
-                <li>
-                    <a href="https://thorstenbeckerde.github.io/NPCEW/" target="_blank" rel="noopener noreferrer">NPC Emotion Weaver</a>
-                    <p class="description">A tool for game writers to visually map the emotional states, triggers, and narrative arcs of Non-Player Characters (NPCs).</p>
-                </li>
-                <li>
-                    <a href="https://thorstenbeckerde.github.io/CHORUSPS/" target="_blank" rel="noopener noreferrer">CHORUS Perceptual Storyteller</a>
-                    <p class="description">A narrative design tool for mapping stories based on character perception and sensory experience. Ideal for interactive fiction, with exports to Ren'Py, Yarn, and Ink.</p>
-                </li>
-            </ul>
+        <!-- Section 2: Specialized Versions -->
+        <section class="mt-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">Specialized Game & Narrative Design Versions</h2>
+            <p class="text-lg text-gray-600 mb-8">Derivatives of the main apps, tailored for storytellers and game developers.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">NPC Emotion Weaver</h3>
+                        <p class="text-gray-600">A tool for game writers to visually map the emotional states, triggers, and narrative arcs of Non-Player Characters (NPCs).</p>
+                    </div>
+                     <div class="p-6 bg-gray-50">
+                        <a href="https://thorstenbeckerde.github.io/NPCEW/" target="_blank" rel="noopener noreferrer" class="inline-block bg-red-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-red-600 transition-colors duration-300 w-full text-center">View App</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">CHORUS Perceptual Storyteller</h3>
+                        <p class="text-gray-600">A narrative design tool for mapping stories based on character perception and sensory experience. Ideal for interactive fiction, with exports to Ren'Py, Yarn, and Ink.</p>
+                    </div>
+                     <div class="p-6 bg-gray-50">
+                        <a href="https://thorstenbeckerde.github.io/CHORUSPS/" target="_blank" rel="noopener noreferrer" class="inline-block bg-yellow-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-yellow-600 transition-colors duration-300 w-full text-center">View App</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Professional & Strategic Editions</h2>
-             <p class="description">Tools adapted for business, planning, and analysis.</p>
-            <ul>
-                <li>
-                    <a href="https://thorstenbeckerde.github.io/CHORUSstrategist/" target="_blank" rel="noopener noreferrer">CHORUS Strategist Edition</a>
-                    <p class="description">A powerful version of CHORUS for strategic planning. Map out objectives, assets, threats, and courses of action for business, wargaming, or competitive analysis.</p>
-                </li>
-            </ul>
+        <!-- Section 3: Professional Editions -->
+        <section class="mt-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">Professional & Strategic Editions</h2>
+            <p class="text-lg text-gray-600 mb-8">Tools adapted for business, planning, and analysis.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">CHORUS Strategist Edition</h3>
+                        <p class="text-gray-600">A powerful version of CHORUS for strategic planning. Map out objectives, assets, threats, and courses of action for business, wargaming, or competitive analysis.</p>
+                    </div>
+                     <div class="p-6 bg-gray-50">
+                        <a href="https://thorstenbeckerde.github.io/CHORUSstrategist/" target="_blank" rel="noopener noreferrer" class="inline-block bg-indigo-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-indigo-600 transition-colors duration-300 w-full text-center">View App</a>
+                    </div>
+                </div>
+            </div>
         </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2024 Thorsten Becker. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-white mt-12 border-t">
+        <div class="container mx-auto px-6 py-6">
+            <p class="text-center text-gray-500">&copy; 2024 Thorsten Becker. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>
