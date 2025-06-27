@@ -7,109 +7,218 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Using Lexend font, designed for reading comfort and speed -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        /* Custom properties for a softer, sensory-friendly color palette */
+        :root {
+            --bg-main: #F7F7F9;
+            --bg-card: #FFFFFF;
+            --text-primary: #3D3D3D;
+            --text-secondary: #5A5A5A;
+            --text-heading: #2A2A2A;
+            --border-soft: #EAEAEA;
+            --shadow-color: 220, 220, 240; /* A soft lavender shadow */
+            
+            /* Accent colors for buttons and details */
+            --accent-1: #82aaff;
+            --accent-2: #c792ea;
+            --accent-3: #89ddff;
+            --accent-4: #ffcb8b;
+            --accent-5: #c3e88d;
+            --accent-6: #f07178;
         }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+        body {
+            font-family: 'Lexend', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+        }
+
+        /* Card styles for a softer, more tactile feel */
+        .sensory-card {
+            background-color: var(--bg-card);
+            border-radius: 20px;
+            border: 1px solid var(--border-soft);
+            box-shadow: 0 4px 15px -5px rgba(var(--shadow-color), 0.2);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                        box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .sensory-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 25px -8px rgba(var(--shadow-color), 0.4);
+        }
+
+        /* Styling for the abstract icons inside cards */
+        .card-icon {
+            height: 40px;
+            width: 40px;
+            margin-bottom: 1rem;
+            opacity: 0.7;
+        }
+        
+        /* Custom button styles */
+        .sensory-button {
+            border-radius: 12px;
+            font-weight: 600;
+            padding: 12px 24px;
+            transition: all 0.3s ease;
+            color: white;
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .sensory-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px -2px rgba(0,0,0,0.2);
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="antialiased">
 
     <!-- Header Section -->
-    <header class="bg-white shadow-sm">
-        <div class="container mx-auto px-6 py-10 text-center">
-            <h1 class="text-4xl font-bold text-gray-900 md:text-5xl">Thorsten Becker</h1>
-            <p class="mt-3 text-lg text-gray-600">A collection of web-based tools for thought, creativity, and strategic planning.</p>
-            <div class="mt-5 flex justify-center gap-4">
-                <a href="https://github.com/thorstenbeckerde" target="_blank" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">
+    <header>
+        <div class="container mx-auto px-6 py-16 text-center">
+            <h1 class="text-5xl font-bold md:text-6xl" style="color: var(--text-heading);">Thorsten Becker</h1>
+            <p class="mt-4 text-xl" style="color: var(--text-secondary);">A collection of web-based tools for thought, creativity, and strategic planning.</p>
+            <div class="mt-8 flex justify-center gap-6">
+                <a href="https://github.com/thorstenbeckerde" target="_blank" class="text-gray-500 hover:text-gray-800 transition-colors duration-300">
                     <span class="sr-only">GitHub</span>
-                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
                 </a>
             </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-6 py-12">
+    <main class="container mx-auto px-6 py-8">
         
         <!-- Section 1: Main Apps -->
         <section>
-            <h2 class="text-3xl font-bold text-gray-900 mb-2">Main Apps under the Clarity Navigation framework</h2>
-            <p class="text-lg text-gray-600 mb-8">These are the core tools for mapping internal experiences.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover flex flex-col">
-                    <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Fuzzy Emotion Mapping System (FEMS)</h3>
-                        <p class="text-gray-600">A visual tool for exploring your emotional landscape. Map aspects of your inner world to gain clarity on feelings and their connections.</p>
+            <div class="text-left mb-12">
+                <h2 class="text-3xl font-semibold" style="color: var(--text-heading);">Main Apps: Clarity Navigation</h2>
+                <p class="mt-2 text-lg" style="color: var(--text-secondary);">Core tools for mapping internal experiences.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- FEMS Card -->
+                <div class="sensory-card flex flex-col">
+                    <div class="p-8 flex-grow">
+                        <!-- Custom Icon: Orbiting circles -->
+                        <svg class="card-icon" style="color: var(--accent-1);" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="4" fill="currentColor"/>
+                            <circle cx="20" cy="8" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="33" cy="20" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="7" cy="20" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+                            <ellipse cx="20" cy="20" rx="13" ry="13" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+                        </svg>
+                        <h3 class="text-2xl font-semibold mb-2" style="color: var(--text-heading);">FEMS</h3>
+                        <p style="color: var(--text-secondary);">A visual tool for exploring your emotional landscape. Map aspects of your inner world to gain clarity on feelings and their connections.</p>
                     </div>
-                    <div class="p-6 bg-gray-50">
-                        <a href="https://thorstenbeckerde.github.io/FEMS/" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 w-full text-center">View App</a>
+                    <div class="p-6">
+                        <a href="https://thorstenbeckerde.github.io/FEMS/" target="_blank" rel="noopener noreferrer" class="sensory-button" style="background-color: var(--accent-1);">View App</a>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover flex flex-col">
-                    <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">CHORUS</h3>
-                        <p class="text-gray-600">A non-linear note-taking system for writers and creatives. Structure your thoughts as constellations of ideas, not rigid outlines.</p>
+                <!-- CHORUS Card -->
+                <div class="sensory-card flex flex-col">
+                    <div class="p-8 flex-grow">
+                        <!-- NEW Custom Icon: Symmetrical Dotted Spiral -->
+                        <svg class="card-icon" style="color: var(--accent-2);" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 20 C 24.5 20 26 15.5 20 15.5 C 14 15.5 12.5 24.5 20 24.5 C 28 24.5 29.5 11.5 20 11.5 C 11 11.5 8.5 28.5 20 28.5 C 32 28.5 33.5 7.5 20 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+                            <circle cx="20" cy="20" r="1.5" fill="currentColor"/>
+                            <circle cx="23.2" cy="15.8" r="1.2" fill="currentColor" opacity="0.9"/>
+                            <circle cx="16.8" cy="16.8" r="1.2" fill="currentColor" opacity="0.9"/>
+                            <circle cx="15.8" cy="23.2" r="1.2" fill="currentColor" opacity="0.9"/>
+                            <circle cx="24.2" cy="23.2" r="1.5" fill="currentColor" opacity="0.9"/>
+                            <circle cx="27.8" cy="13.2" r="1.2" fill="currentColor" opacity="0.9"/>
+                            <circle cx="12.2" cy="13.2" r="1.5" fill="currentColor" opacity="0.9"/>
+                            <circle cx="12.2" cy="27.8" r="1.2" fill="currentColor" opacity="0.9"/>
+                        </svg>
+                        <h3 class="text-2xl font-semibold mb-2" style="color: var(--text-heading);">CHORUS</h3>
+                        <p style="color: var(--text-secondary);">A non-linear note-taking system for writers and creatives. Structure your thoughts as constellations of ideas, not rigid outlines.</p>
                     </div>
-                     <div class="p-6 bg-gray-50">
-                        <a href="https://thorstenbeckerde.github.io/CHORUS/" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-green-600 transition-colors duration-300 w-full text-center">View App</a>
+                     <div class="p-6">
+                        <a href="https://thorstenbeckerde.github.io/CHORUS/" target="_blank" rel="noopener noreferrer" class="sensory-button" style="background-color: var(--accent-2);">View App</a>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover flex flex-col">
-                    <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Stellary</h3>
-                        <p class="text-gray-600">A poetic and sensory approach to memory. Create "constellations" of images, sounds, and text fragments to map and reflect on experiences.</p>
+                <!-- Stellary Card -->
+                <div class="sensory-card flex flex-col">
+                    <div class="p-8 flex-grow">
+                        <!-- NEW Custom Icon: Clean Constellation/Star -->
+                        <svg class="card-icon" style="color: var(--accent-3);" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 13L22.1 18.2L27.5 18.2L23.2 21.4L25.3 26.6L20 23.4L14.7 26.6L16.8 21.4L12.5 18.2L17.9 18.2L20 13Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="currentColor" fill-opacity="0.2"/>
+                            <circle cx="10" cy="10" r="1.5" fill="currentColor" opacity="0.8"/>
+                            <circle cx="32" cy="12" r="1" fill="currentColor" opacity="0.8"/>
+                            <circle cx="30" cy="30" r="1.5" fill="currentColor" opacity="0.8"/>
+                            <path d="M11.5 11.5 L 18 17" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/>
+                            <path d="M26.5 22.5 L 29 29" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/>
+                        </svg>
+                        <h3 class="text-2xl font-semibold mb-2" style="color: var(--text-heading);">Stellary</h3>
+                        <p style="color: var(--text-secondary);">A poetic and sensory approach to memory. Create "constellations" of images, sounds, and text fragments to map and reflect on experiences.</p>
                     </div>
-                     <div class="p-6 bg-gray-50">
-                        <a href="https://thorstenbeckerde.github.io/Stellary/" target="_blank" rel="noopener noreferrer" class="inline-block bg-purple-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-purple-600 transition-colors duration-300 w-full text-center">View App</a>
+                     <div class="p-6">
+                        <a href="https://thorstenbeckerde.github.io/Stellary/" target="_blank" rel="noopener noreferrer" class="sensory-button" style="background-color: var(--accent-3);">View App</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Section 2: Specialized Versions -->
-        <section class="mt-16">
-            <h2 class="text-3xl font-bold text-gray-900 mb-2">Specialized Game & Narrative Design Versions</h2>
-            <p class="text-lg text-gray-600 mb-8">Derivatives of the main apps, tailored for storytellers and game developers.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover flex flex-col">
-                    <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">NPC Emotion Weaver</h3>
-                        <p class="text-gray-600">A tool for game writers to visually map the emotional states, triggers, and narrative arcs of Non-Player Characters (NPCs).</p>
+        <section class="mt-20">
+            <div class="text-left mb-12">
+                <h2 class="text-3xl font-semibold" style="color: var(--text-heading);">Specialized Game & Narrative Design</h2>
+                <p class="mt-2 text-lg" style="color: var(--text-secondary);">Derivatives of the main apps, tailored for storytellers and game developers.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- NPCEW Card -->
+                <div class="sensory-card flex flex-col">
+                    <div class="p-8 flex-grow">
+                        <svg class="card-icon" style="color: var(--accent-4);" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        <h3 class="text-2xl font-semibold mb-2" style="color: var(--text-heading);">NPC Emotion Weaver</h3>
+                        <p style="color: var(--text-secondary);">A tool for game writers to visually map the emotional states, triggers, and narrative arcs of Non-Player Characters (NPCs).</p>
                     </div>
-                     <div class="p-6 bg-gray-50">
-                        <a href="https://thorstenbeckerde.github.io/NPCEW/" target="_blank" rel="noopener noreferrer" class="inline-block bg-red-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-red-600 transition-colors duration-300 w-full text-center">View App</a>
+                     <div class="p-6">
+                        <a href="https://thorstenbeckerde.github.io/NPCEW/" target="_blank" rel="noopener noreferrer" class="sensory-button" style="background-color: var(--accent-4);">View App</a>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover flex flex-col">
-                    <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">CHORUS Perceptual Storyteller</h3>
-                        <p class="text-gray-600">A narrative design tool for mapping stories based on character perception and sensory experience. Ideal for interactive fiction, with exports to Ren'Py, Yarn, and Ink.</p>
+                <!-- CHORUS PS Card -->
+                <div class="sensory-card flex flex-col">
+                    <div class="p-8 flex-grow">
+                        <svg class="card-icon" style="color: var(--accent-5);" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <h3 class="text-2xl font-semibold mb-2" style="color: var(--text-heading);">CHORUS Perceptual Storyteller</h3>
+                        <p style="color: var(--text-secondary);">A narrative design tool for mapping stories based on character perception and sensory experience. Ideal for interactive fiction.</p>
                     </div>
-                     <div class="p-6 bg-gray-50">
-                        <a href="https://thorstenbeckerde.github.io/CHORUSPS/" target="_blank" rel="noopener noreferrer" class="inline-block bg-yellow-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-yellow-600 transition-colors duration-300 w-full text-center">View App</a>
+                     <div class="p-6">
+                        <a href="https://thorstenbeckerde.github.io/CHORUSPS/" target="_blank" rel="noopener noreferrer" class="sensory-button" style="background-color: var(--accent-5);">View App</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Section 3: Professional Editions -->
-        <section class="mt-16">
-            <h2 class="text-3xl font-bold text-gray-900 mb-2">Professional & Strategic Editions</h2>
-            <p class="text-lg text-gray-600 mb-8">Tools adapted for business, planning, and analysis.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 card-hover flex flex-col">
-                    <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">CHORUS Strategist Edition</h3>
-                        <p class="text-gray-600">A powerful version of CHORUS for strategic planning. Map out objectives, assets, threats, and courses of action for business, wargaming, or competitive analysis.</p>
+        <section class="mt-20">
+            <div class="text-left mb-12">
+                <h2 class="text-3xl font-semibold" style="color: var(--text-heading);">Professional & Strategic Editions</h2>
+                <p class="mt-2 text-lg" style="color: var(--text-secondary);">Tools adapted for business, planning, and analysis.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- CHORUS Strategist Card -->
+                <div class="sensory-card flex flex-col">
+                    <div class="p-8 flex-grow">
+                        <!-- Custom Icon: Strategic Map -->
+                        <svg class="card-icon" style="color: var(--accent-6);" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12L15 7L25 12L35 7V33L25 28L15 33L5 28V12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 7V33" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+                            <path d="M25 12V28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+                            <path d="M10 18L10 22" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 20L12 20" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <h3 class="text-2xl font-semibold mb-2" style="color: var(--text-heading);">CHORUS Strategist Edition</h3>
+                        <p style="color: var(--text-secondary);">A powerful version of CHORUS for strategic planning. Map out objectives, assets, threats, and courses of action for business or wargaming.</p>
                     </div>
-                     <div class="p-6 bg-gray-50">
-                        <a href="https://thorstenbeckerde.github.io/CHORUSstrategist/" target="_blank" rel="noopener noreferrer" class="inline-block bg-indigo-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-indigo-600 transition-colors duration-300 w-full text-center">View App</a>
+                     <div class="p-6">
+                        <a href="https://thorstenbeckerde.github.io/CHORUSstrategist/" target="_blank" rel="noopener noreferrer" class="sensory-button" style="background-color: var(--accent-6);">View App</a>
                     </div>
                 </div>
             </div>
@@ -118,9 +227,9 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white mt-12 border-t">
-        <div class="container mx-auto px-6 py-6">
-            <p class="text-center text-gray-500">&copy; 2024 Thorsten Becker. All rights reserved.</p>
+    <footer class="mt-24 border-t" style="border-color: var(--border-soft);">
+        <div class="container mx-auto px-6 py-8">
+            <p class="text-center" style="color: var(--text-secondary);">&copy; 2024 Thorsten Becker. All rights reserved.</p>
         </div>
     </footer>
 
