@@ -88,7 +88,14 @@
                     <span class="sr-only">GitHub</span>
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
                 </a>
-            </div>
+        </div>
+
+            <nav class="mt-8 flex flex-wrap justify-center gap-4 text-base">
+                <a href="#core-tools" class="px-4 py-2 rounded-full border hover:bg-white transition" style="border-color: var(--border); color: var(--text-secondary);">Core Tools</a>
+                <a href="#gpts" class="px-4 py-2 rounded-full border hover:bg-white transition" style="border-color: var(--border); color: var(--text-secondary);">GPT Companions</a>
+                <a href="#virtualresonanz" class="px-4 py-2 rounded-full border hover:bg-white transition" style="border-color: var(--border); color: var(--text-secondary);">Virtualresonanz</a>
+                <a href="#pro-editions" class="px-4 py-2 rounded-full border hover:bg-white transition" style="border-color: var(--border); color: var(--text-secondary);">Pro Editions</a>
+            </nav>
         </div>
     </header>
 
@@ -96,7 +103,7 @@
     <main class="container mx-auto px-6 py-8">
         
         <!-- Section 1: Main Apps -->
-        <section>
+        <section id="core-tools">
             <div class="text-left mb-12">
                 <h2 class="text-3xl font-semibold" style="color: var(--text-heading);">Attuned Perception Framework — Core Tools.</h2>
                 <p class="mt-2 text-lg" style="color: var(--text-secondary);">Core tools for mapping internal experiences.</p>
@@ -165,41 +172,130 @@
         </section>
 
         <!-- Section 2: Specialized Versions -->
-        <section class="mt-20">
-            <div class="text-left mb-12">
-                <h2 class="text-3xl font-semibold" style="color: var(--text-heading);">Virtualresonanz — Game & Narrative Design.</h2>
+        
+<section class="mt-20" id="gpts">
+    <div class="text-left mb-12">
+        <h2 class="text-3xl font-semibold" style="color: var(--text-heading);">Custom GPT Companions</h2>
+        <p class="mt-2 text-lg" style="color: var(--text-secondary);">Purpose-built assistants that extend the Attuned Perception Framework into guided reflection, mapping, and analysis.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- The Clarity Mirror -->
+        <div class="sensory-card flex flex-col">
+            <div class="p-8 flex-grow">
+                <!-- FEMS Orbit Icon -->
+                <svg class="card-icon" style="color: var(--accent-1);" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="20" r="8" stroke="currentColor" stroke-width="1.5"/>
+                    <circle cx="20" cy="20" r="2" fill="currentColor"/>
+                    <path d="M20 6 A14 14 0 0 1 34 20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                    <path d="M20 34 A14 14 0 0 1 6 20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+                <h3 class="text-2xl font-semibold mb-2" style="color: var(--text-heading);">The Clarity Mirror</h3>
+                <p style="color: var(--text-secondary);">Interprets uploaded FEMS maps (image/JSON). Surfaces dominant nodes, resonance vs. dissonance, anchors, and offers gentle reflection prompts. <span class="italic">(Not clinical guidance.)</span></p>
+            </div>
+            <div class="p-6">
+                <a href="https://chatgpt.com/g/g-67e9376fe7dc81919293ee6e06131cf8-the-clarity-mirror" target="_blank" rel="noopener noreferrer" class="sensory-button" style="background-color: var(--accent-1);">Open GPT</a>
+            </div>
+        </div>
+
+        <!-- Clarity Mapper Pro -->
+        <div class="sensory-card flex flex-col">
+            <div class="p-8 flex-grow">
+                <!-- Metrics/Grid Icon -->
+                <svg class="card-icon" style="color: var(--accent-1);" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="8" y="8" width="24" height="24" rx="3" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M12 20H28M20 12V28" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+                    <path d="M12 26 L18 22 L22 24 L28 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <h3 class="text-2xl font-semibold mb-2" style="color: var(--text-heading);">Clarity Mapper Pro</h3>
+                <p style="color: var(--text-secondary);">For researchers & practitioners: converts FEMS maps into numeric features (counts, sizes, distances, resonance/dissonance amplitudes, sub‑nodes) with CSV/JSON export for analysis.</p>
+            </div>
+            <div class="p-6">
+                <a href="https://chatgpt.com/g/g-67fb7013a60481919127bd14f74aa72e-clarity-mapper-pro" target="_blank" rel="noopener noreferrer" class="sensory-button" style="background-color: var(--accent-1);">Open GPT</a>
+            </div>
+        </div>
+
+        <!-- CORE Muse -->
+        <div class="sensory-card flex flex-col">
+            <div class="p-8 flex-grow">
+                <!-- CORE Spiral Icon -->
+                <svg class="card-icon" style="color: var(--accent-2);" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 10 A10 10 0 1 1 10 20" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <path d="M20 14 A6 6 0 1 1 14 20" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <circle cx="20" cy="20" r="1.5" fill="currentColor"/>
+                </svg>
+                <h3 class="text-2xl font-semibold mb-2" style="color: var(--text-heading);">CORE Muse</h3>
+                <p style="color: var(--text-secondary);">Guides CORE mapping: tag chunks, orient spatially (Chunk–Orient–Relate), and turn the map into an outline or talking points.</p>
+            </div>
+            <div class="p-6">
+                <a href="https://chatgpt.com/g/g-68973ba4f4188191930f0891e252caeb-core-muse" target="_blank" rel="noopener noreferrer" class="sensory-button" style="background-color: var(--accent-2);">Open GPT</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second row: single full-width card -->
+    <div class="mt-6 grid grid-cols-1 gap-10">
+        
+
+    <p class="mt-8 text-center text-sm" style="color: var(--text-secondary);">Personal use is free. Professional/classroom use — please request a license.</p>
+
+</section>
+<section class="mt-20" id="virtualresonanz">
+            <div class="text-left mb-12"><h2 class="text-3xl font-semibold">Virtualresonanz — Game & Narrative Design.</h2>
                 <p class="mt-2 text-lg" style="color: var(--text-secondary);">Derivatives of the main apps, tailored for storytellers and game developers.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- NPCEW Card -->
                 <div class="sensory-card flex flex-col">
                     <div class="p-8 flex-grow">
-                        <svg class="card-icon" style="color: var(--accent-4);" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        <svg class="card-icon" style="color: var(--accent-1);" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
                         <h3 class="text-2xl font-semibold mb-2" style="color: var(--text-heading);">NPC Emotion Weaver</h3>
                         <p style="color: var(--text-secondary);">A tool for game writers to visually map the emotional states, triggers, and narrative arcs of Non-Player Characters (NPCs).</p>
                     </div>
                      <div class="p-6">
-                        <a href="https://thorstenbeckerde.github.io/NPCEW/" target="_blank" rel="noopener noreferrer" class="sensory-button" style="background-color: var(--accent-4);">View App</a>
+                        <a href="https://thorstenbeckerde.github.io/NPCEW/" target="_blank" rel="noopener noreferrer" class="sensory-button" style="background-color: var(--accent-1);">View App</a>
                     </div>
                 </div>
                 <!-- CORE PS Card -->
                 <div class="sensory-card flex flex-col">
                     <div class="p-8 flex-grow">
-                        <svg class="card-icon" style="color: var(--accent-5);" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <svg class="card-icon" style="color: var(--accent-2);" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
                         <h3 class="text-2xl font-semibold mb-2" style="color: var(--text-heading);">CORE Perceptual Storyteller</h3>
                         <p style="color: var(--text-secondary);">A narrative design tool for mapping stories based on character perception and sensory experience. Ideal for interactive fiction.</p>
                     </div>
                      <div class="p-6">
-                        <a href="https://thorstenbeckerde.github.io/COREPS/" target="_blank" rel="noopener noreferrer" class="sensory-button" style="background-color: var(--accent-5);">View App</a>
+                        <a href="https://thorstenbeckerde.github.io/COREPS/" target="_blank" rel="noopener noreferrer" class="sensory-button" style="background-color: var(--accent-2);">View App</a>
                     </div>
                 </div>
+            
+        <!-- Resonant Player -->
+        <div class="sensory-card flex flex-col">
+            <div class="p-8 flex-grow">
+                <!-- Gamepad Icon -->
+                <svg class="card-icon" style="color: var(--accent-3);" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="8" y="16" width="24" height="10" rx="5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <circle cx="14" cy="21" r="1.5" fill="currentColor"/>
+                    <line x1="14" y1="19" x2="14" y2="23" stroke="currentColor" stroke-width="1.5"/>
+                    <line x1="12" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="1.5"/>
+                    <circle cx="26" cy="20" r="1.2" fill="currentColor"/>
+                    <circle cx="28.5" cy="22.5" r="1.2" fill="currentColor"/>
+                    <circle cx="26" cy="25" r="1.2" fill="currentColor"/>
+                    <circle cx="23.5" cy="22.5" r="1.2" fill="currentColor"/>
+                </svg>
+                <h3 class="text-2xl font-semibold mb-2" style="color: var(--text-heading);">Resonant Player</h3>
+                <p style="color: var(--text-secondary);">Explores your favorite games through the lens of Sensory Zones, revealing a personal engagement profile that reflects how virtual environments spark, sustain, and shape your emotional flow.</p>
             </div>
+            <div class="p-6">
+                <a href="https://chatgpt.com/g/g-688e57567dd081918391f69a22394e47-resonant-player" target="_blank" rel="noopener noreferrer" class="sensory-button" style="background-color: var(--accent-3);">Open GPT</a>
+            </div>
+        </div>
+
+    </div>
         </section>
 
         <!-- Section 3: Professional Editions -->
-        <section class="mt-20">
-            <div class="text-left mb-12">
-                <h2 class="text-3xl font-semibold" style="color: var(--text-heading);">Professional & Strategic Editions</h2>
+        <section class="mt-20" id="pro-editions">
+            <div class="text-left mb-12"><h2 class="text-3xl font-semibold">Professional & Strategic Editions</h2>
                 <p class="mt-2 text-lg" style="color: var(--text-secondary);">Tools adapted for business, planning, and analysis.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -229,9 +325,10 @@
     <!-- Footer -->
     <footer class="mt-24 border-t" style="border-color: var(--border-soft);">
         <div class="container mx-auto px-6 py-8">
-            <p class="text-center" style="color: var(--text-secondary);">&copy; 2024 Thorsten Becker. All rights reserved.</p>
+            <p class="text-center" style="color: var(--text-secondary);">&copy; <span id="year"></span> Thorsten Becker. All rights reserved.</p>
         </div>
     </footer>
 
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
